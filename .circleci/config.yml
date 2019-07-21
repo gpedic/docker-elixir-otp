@@ -1,12 +1,13 @@
 version: 2
 jobs:
   build:
+    machine: true
     steps:
       - checkout
 
-      - setup_remote_docker:
-          docker_layer_caching: true
-          version: 18.06.0-ce
+      # - setup_remote_docker:
+      #     docker_layer_caching: true
+      #     version: 18.06.0-ce
           
       - run:
           name: Build erlang image
