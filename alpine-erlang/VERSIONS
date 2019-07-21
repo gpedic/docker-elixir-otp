@@ -1,0 +1,6 @@
+# docker images
+alpine 3.9 644fcb1a676b5165371437feaa922943aaf7afcfa8bfee4472f6860aad1ef2a0
+gpedic/alpine-erlang 22.0.7 0040e87fdc3d5a00dd67a77fcecbd47071eb1e20bff07f35c2a4c7f148af47c1
+
+# archives
+erlang 22.0.7 04c090b55ec4a01778e7e1a5b7fdf54012548ca72737965b7aa8c4d7878c92bc

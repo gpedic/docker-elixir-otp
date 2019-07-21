@@ -1,0 +1,7 @@
+# docker images
+alpine 3.9 644fcb1a676b5165371437feaa922943aaf7afcfa8bfee4472f6860aad1ef2a0
+gpedic/alpine-erlang 22.0.7 0040e87fdc3d5a00dd67a77fcecbd47071eb1e20bff07f35c2a4c7f148af47c1
+gpedic/alpine-elixir 1.9.1 4b51adaea3718274b9e63a76183222472535b1fc3f0ba4a43e5129efa377aa4d
+
+# download archives
+elixir 1.9.1 94daa716abbd4493405fb2032514195077ac7bc73dc2999922f13c7d8ea58777
