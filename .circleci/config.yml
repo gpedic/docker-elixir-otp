@@ -1,14 +1,14 @@
 version: 2
 jobs:
   build:
-    docker:
-      - image: 18.09.8-git
-
+    machine: true
     steps:
       - checkout
 
       - setup_remote_docker:
           docker_layer_caching: true
+          version: 18.06.0-ce
+          
 
       - run:
           name: Build erlang image
