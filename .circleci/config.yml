@@ -1,0 +1,18 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: 18.09.8-git
+
+    steps:
+      - checkout
+
+      - setup_remote_docker:
+          docker_layer_caching: true
+
+      - run:
+          name: Build erlang image
+          command: |
+            docker login -u $DOCKER_USER -p $DOCKER_PASS
+            cd erlang
+            make release
