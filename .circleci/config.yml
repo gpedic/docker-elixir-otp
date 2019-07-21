@@ -4,14 +4,18 @@ jobs:
     machine: true
     steps:
       - checkout
-
-      # - setup_remote_docker:
-      #     docker_layer_caching: true
-      #     version: 18.06.0-ce
-          
+      - run:
+          name: Login to docker
+          command: echo "$DOCKER_PASS" | docker login --username "$DOCKER_USER" --password-stdin
       - run:
           name: Build erlang image
           command: |
-            echo "$DOCKER_PASS" | docker login --username "$DOCKER_USER" --password-stdin
             cd alpine-erlang
+            make release
+            cd ..
+
+      - run:
+          name: Build elixir image
+          command: |
+            cd alpine-elixir
             make release
