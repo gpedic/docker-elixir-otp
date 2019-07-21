@@ -12,6 +12,6 @@ jobs:
       - run:
           name: Build erlang image
           command: |
-            echo "$DOCKER_PASS" | docker login --username $DOCKER_USER --password-stdin
-            cd erlang
+            echo "$DOCKER_PASS" | docker login --username "$DOCKER_USER" --password-stdin
+            cd alpine-erlang
             make release
