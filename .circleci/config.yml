@@ -7,12 +7,12 @@ jobs:
       - run:
           name: Login to docker
           command: echo "$DOCKER_PASS" | docker login --username "$DOCKER_USER" --password-stdin
-      - run:
-          name: Build erlang image
-          command: |
-            cd alpine-erlang
-            make release
-            cd ..
+      # - run:
+      #     name: Build erlang image
+      #     command: |
+      #       cd alpine-erlang
+      #       make release
+      #       cd ..
 
       - run:
           name: Build elixir image

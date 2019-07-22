@@ -41,7 +41,6 @@ sh: ## Boot to a shell prompt
 
 build: ## Build the Docker image
 	docker build \
-		--build-arg ALPINE_IMAGE=alpine@sha256:$(ALPINE_DIGEST) \
 		--build-arg FROM_ERLANG_IMAGE=$(ERLANG_IMAGE_NAME)@sha256:$(ERLANG_IMAGE_DIGEST) \
 		--build-arg FROM_ELIXIR_IMAGE=$(ELIXIR_IMAGE_NAME):$(VERSION) \
 		--build-arg ELIXIR_VERSION=$(VERSION) \
